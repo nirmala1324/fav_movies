@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Merriweather&display=swap" rel="stylesheet">
+
+    <title>My Favorite Movies</title>
+    
+</head>
+
+
+<style>
+  * {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .mainTitle {
+    width: 100%;
+    height: 250px;
+    
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://c4.wallpaperflare.com/wallpaper/803/347/759/anime-natural-light-landscape-forest-studio-ghibli-hd-wallpaper-preview.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+  }
+  
+  .mainTitle > button {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    
+    background-color: transparent;
+    color: white;
+    
+    border: 1px solid white;
+    border-radius: 50px;
+  }
+  
+  .mainTitle > button:hover {
+    border: 2px solid;
+  }
+  
+  .form-control {
+    font-size: small;
+  }
+  
+  .first_div {
+    padding: 50px 0 50px 0;
+  }
+  
+  .form_container {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    
+    display:flex;
+    flex-direction: column;
+  }
+  
+  
+  .movie_card_container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    
+    display: flex;
+    padding: 50px 0 50px 0;
+    
+    gap: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: small;
+    text-align: justify;
+  }
+  
+  .card_comment {
+    font-size: small;
+    color: grey;
+  }
+  
+</style>
+
+<body>
+    <div class="mainTitle">
+      <h1><b>My Favorite Movies</b></h1>
+      <button>save a new movie</button>
+    </div>
+    
+    <div class="first_div">
+      
+      <!-- FORM CONTAINER -->
+      <div class="form_container">
+        
+        <!-- MOVIE URL INPUT -->
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="movie_url" placeholder="name@example.com">
+          <label for="floatingInput">Movie URL</label>
+        </div>
+        
+        <!-- STARS INPUT GROUP -->
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect01">Stars</label>
+          <select class="form-select" id="inputGroupSelect01">  <!-- DROP DOWN -->
+            <option selected>-- Select a rating --</option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option></
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+          </select>
+        </div>
+        
+        <!-- COMMENT TEXT AREA -->
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
+        
+        <div style="margin: auto; padding: 15px">
+          <button type="button" class="btn btn-dark">Save</button>
+          <button type="button" class="btn btn-light" style="border: 2px solid black">Close</button>
+        </div>
+        
+      </div>
+      
+      <!-- MOVIE CARD -->
+      <div class="movie_card_container">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+          <div class="cols">
+            <div class="card h-100">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/660/281/desktop-wallpaper-official-poster-of-makoto-shinkai-s-weathering-with-you-movies.jpg" class="card-img-top" title="Weathering with You">
+            <div class="card-body">
+              <h5 class="card-title">Weathering with You</h5>
+              <p class="card-text">Set during a period of exceptionally rainy weather, high-school boy Hodaka Morishima runs away from his troubled rural home to Tokyo and befriends an orphan girl who can manipulate the weather.</p>
+              <p>⭐⭐⭐⭐</p>
+              <p class="card_comment">Less than my expectation - like Your Name :( but of course it's still bomb, Makoto Shinkai never fails.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cols">
+            <div class="card h-100">
+            <img src="https://media-cache.cinematerial.com/p/500x/lwha2oye/kimi-no-na-wa-japanese-movie-poster.jpg?v=1630399147" class="card-img-top" title="Weathering with You">
+            <div class="card-body">
+              <h5 class="card-title">Your Name.</h5>
+              <p class="card-text">Two teenagers share a profound, magical connection upon discovering they are swapping bodies. Things manage to become even more complicated when the boy and girl decide to meet in person.</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p class="card_comment">Speechless, the nature details 🤌✨  Shame on you if you don't watch the HD one.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cols">
+            <div class="card h-100">
+            <img src="https://i.mydramalist.com/EVe0p_4f.jpg" class="card-img-top" title="Weathering with You">
+            <div class="card-body">
+              <h5 class="card-title">Reply 1998</h5>
+              <p class="card-text">Follows the lives of 5 families living on the same street in a neighbourhood called Ssangmundong in Seoul. A nostalgic look back at the year 1988.</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p class="card_comment">Not a movie, but TV series, since I love it so much. A comfort TV series that includes daily life, comedy, romance, family, and most importantly it shows how life is before gadget being a part of our life 🌳✨</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cols">
+            <div class="card h-100">
+            <img src="https://shoptrends.com/media/catalog/product/cache/e6772dd5d7528380fb5dc1448d019df8/p/o/poster2367-1.jpg" class="card-img-top" title="Weathering with You">
+            <div class="card-body">
+              <h5 class="card-title">The Pirate Fairy</h5>
+              <p class="card-text">Tinker Bell (Mae Whitman) and her friends go in search of a wayward fairy (Christina Hendricks) who fled Pixie Hollow and joined up with a band of scheming pirates led by the future Captain Hook (Tom Hiddleston).</p>
+              <p>⭐⭐⭐⭐</p>
+              <p class="card_comment">Most favorite Tinker Bell movie, the fae friends on set, their friendship, and adventure were so beautiful. It's upseting that Disney not producing Disney fairy anymore >:o</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cols">
+            <div class="card h-100">
+            <img src="https://i.ebayimg.com/images/g/bowAAOSwDxBfA~d6/s-l1200.webp" class="card-img-top" title="Weathering with You">
+            <div class="card-body">
+              <h5 class="card-title">The Conjuring</h5>
+              <p class="card-text">Perron family moves into a farmhouse where they experience paranormal phenomena. They consult demonologists, Ed and Lorraine Warren, to help them get rid of the evil entity haunting them.</p>
+              <p>⭐⭐⭐⭐</p>
+              <p class="card_comment">I don't know, it just feels different from other horror movies. Mahbe because I watch it when I was little(?)</p>
+            </div>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+      
+    </div>
+</body>
+
+</html>
